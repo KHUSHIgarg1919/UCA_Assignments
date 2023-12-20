@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+
 typedef struct {
     int* arr;
     int size;
@@ -71,4 +72,28 @@ int myCircularQueueRear(MyCircularQueue* obj) {
 void myCircularQueueFree(MyCircularQueue* obj) {
     free(obj->arr);
     free(obj);
+}
+
+int main(){
+    //Create a circular queue with size 5
+    MyCircularQueue* circularQueue = myCircularQueueCreate(5);
+
+    //Enqueue elements
+    myCircularQueueEnQueue(circularQueue, 1);
+    myCircularQueueEnQueue(circularQueue, 2);
+    myCircularQueueEnQueue(circularQueue, 3);
+
+    //Display front and rear elements
+    printf("Front element: %d\n", myCircularQueueFront(circularQueue));             //Output: 1
+    printf("Rear element: %d\n", myCircularQueueRear(circularQueue));               //Output: 3
+
+    //Dequeue an element
+    myCircularQueueDeQueue(circularQueue);
+
+    printf("Front element after dequeue: %d\n", myCircularQueueFront(circularQueue));     //Output: 2
+    
+    //Free the circular queue
+    myCircularQueueFree(circularQueue);
+
+    return 0;
 }

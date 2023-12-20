@@ -74,6 +74,7 @@ char* removeDuplicateLetters(char* s) {
     }
     return ans;
 }
+
 int main(){
     char inputString[100];
     scanf("%s",&inputString);

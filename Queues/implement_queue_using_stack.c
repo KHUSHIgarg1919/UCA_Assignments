@@ -8,7 +8,6 @@ typedef struct {
     int top2;
 } MyQueue;
 
-
 MyQueue* myQueueCreate() {
     MyQueue *obj = malloc(sizeof(MyQueue));
     obj->top1 = -1;
@@ -45,6 +44,7 @@ bool myQueueEmpty(MyQueue* obj) {
 void myQueueFree(MyQueue* obj) {
     free(obj);
 }
+
 int main() {
     MyQueue* queue = myQueueCreate();
 
