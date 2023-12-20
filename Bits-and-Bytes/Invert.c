@@ -13,5 +13,6 @@ int invert (int x, int p, int n) {
     return x^mask;
 }
 int main(){
-    assert(invert(101010,4,2)==0101);
+    assert(invert(123,3,4)==116);
+    return 0;
 }

@@ -5,7 +5,6 @@
 *  Max ops: 12
 */ 
 
-
 #include<stdio.h>
 #include<assert.h>
 int bang(int x) {
